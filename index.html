@@ -5,10 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>SZNL — The City's Closet</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-<script src="https://js.stripe.com/v3/"></script>
 <link rel="stylesheet" href="styles.css">
+<script src="https://js.stripe.com/v3/"></script>
 </head>
 <body>
+
 
 <!-- NAV -->
 <nav class="nav">
@@ -128,7 +129,7 @@
       <div class="auth-fg"><label class="auth-lbl">Password</label><input class="auth-inp" id="l-pw" type="password" placeholder="••••••••" oninput="clearErr('login-err')" onkeydown="if(event.key==='Enter')doLogin()"></div>
       <button class="auth-btn" onclick="doLogin()">Sign in</button>
       <div class="auth-hint">New boutique? <span onclick="showMain('signup')">Create an account</span></div>
-      <div class="auth-demo">Demo: atelier@email.com / password123</div>
+      <div class="auth-demo">Demo: <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="bedfcadbd2d7dbccfedbd3dfd7d290ddd1d3">[email&#160;protected]</a> / password123</div>
     </div>
   </div>
 </div>
@@ -152,6 +153,7 @@
 <!-- BRAND PORTAL -->
 <div class="view" id="view-portal">
   <div class="portal-layout">
+    <!-- Sidebar -->
     <div class="portal-sidebar">
       <div class="portal-user-block">
         <div class="portal-boutique-name" id="portal-boutique-nm"></div>
@@ -162,10 +164,11 @@
       <div class="portal-nav-item" onclick="showPortalTab(this,'add')" id="ptab-add">Add New Piece</div>
       <div class="portal-nav-item" onclick="showPortalTab(this,'overview')" id="ptab-overview">Overview</div>
     </div>
-
+    <!-- Main -->
     <div class="portal-main">
       <div class="portal-content">
 
+        <!-- MY PIECES TAB -->
         <div id="pp-pieces">
           <div class="portal-header-bar">
             <div class="portal-page-title">My Pieces</div>
@@ -174,6 +177,7 @@
           <div class="pieces-grid" id="pieces-grid"></div>
         </div>
 
+        <!-- ADD PIECE TAB -->
         <div id="pp-add" style="display:none">
           <div class="portal-header-bar">
             <div class="portal-page-title">Add New Piece</div>
@@ -207,6 +211,7 @@
           <button class="submit-piece-btn" onclick="addPiece()">Add to collection</button>
         </div>
 
+        <!-- OVERVIEW TAB -->
         <div id="pp-overview" style="display:none">
           <div class="portal-header-bar">
             <div class="portal-page-title">Overview</div>
@@ -223,7 +228,9 @@
 
 <div class="toast-wrap"><div class="toast" id="toast"></div></div>
 
+
+<div class="toast-wrap"><div class="toast" id="toast"></div></div>
+
 <script src="script.js"></script>
 </body>
 </html>
-Add website homepage
